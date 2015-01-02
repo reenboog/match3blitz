@@ -96,13 +96,13 @@ def copy_files(src, dst):
 def copy_resources(app_android_root):
 
     # remove app_android_root/assets if it exists
-    assets_dir = os.path.join(app_android_root, "assets")
+    assets_dir = os.path.join(app_android_root, "assets/Res")
     if os.path.isdir(assets_dir):
         shutil.rmtree(assets_dir)
 
     # copy resources
     os.mkdir(assets_dir)
-    resources_dir = os.path.join(app_android_root, "../Resources")
+    resources_dir = os.path.join(app_android_root, "../Res")
     if os.path.isdir(resources_dir):
         copy_files(resources_dir, assets_dir)
 
